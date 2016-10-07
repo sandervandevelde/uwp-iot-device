@@ -20,7 +20,7 @@ This is an example integration between a UWP app and Azure IoT Hub. This integra
 
 ### Objectives
 
-In this work shop, you will learn
+In this work shop, you will learn:
 
 1. Creating an IoT Hub in the Azure Portal
 2. Creating a new UWP App
@@ -159,7 +159,7 @@ Let's put a button on the main page of the app to send some telemetry. But first
     }
     ```
 
-4. We have defined the Telemetry class which will hold a water level value. The random levels are sent to the IoT Hub using the method. The telemetry is converted to JSON.
+4. We have defined the Telemetry class which will hold a water level value. The random levels are sent to the IoT Hub using the method. The telemetry is converted to JSON
 5. `Open` the file named 'MainPage.xaml'. The empty page will be shown both in a visual editor and a textual 'XAML' editor
 6. The page contains one component, a grid. But that is merely a container for other visual components
 7. In the XAML editor, within the grid, `add`
@@ -257,7 +257,6 @@ The integration requires an Azure IoT Hub Shared access policy key name with `Re
 
 This is the secret needed from the Azure IoT Hub.
 
-
 ### Monitoring using UI
 
 We can check the arrival of the messages in the Azure IoT Hub using the Device Explorer. This tool is UI based, please check the installation requirements.
@@ -266,6 +265,9 @@ We can check the arrival of the messages in the Azure IoT Hub using the Device E
 2. On the Configuration Tab, insert the IoT Hub `Connection String-primary key` and the `name` of the IoT Hub (as Protocol Gateway Hostname)
 3. Press `Update`
 4. On the Management tab, your device should already be available. It was registered by the bridge the very first time, telemetry arrived
+
+    ![alt tag](img/UwpToIotHub/ihe-devices.png)
+
 5. On the Data tab, Select your `Device ID` and press `Monitor`
 6. This will result in the following messages
 
