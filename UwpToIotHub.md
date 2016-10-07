@@ -1,12 +1,12 @@
 ## Connecting to an IoT Hub using a UWP app
 
-![alt tag](img/arch/Picture01-overview.png)
+![alt tag](img/arch/Picture00-UWP-overview.png)
 
 This is an example integration between a UWP app and Azure IoT Hub. This integration shows features like creating devices in the Azure IoT Hub device registry as well as sending telemetry to the IoT Hub.
 
 *Note: in this workshop, we will create uniquely named Azure resources. The suggested names could be reserved already.*
 
-*Note: The IoT Hub also offers sending commands back to devices. This is not part of this workshop.*
+*Note: The IoT Hub also offers the ability of sending commands back to devices. This is not part of this workshop.*
 
 ### Prerequisites
 
@@ -30,7 +30,7 @@ In this work shop, you will learn
 
 ## Creating an Azure IoT Hub in the Azure portal
 
-![alt tag](img/arch/Picture07-prepare-azure-integration.png)
+![alt tag](img/arch/Picture01-UWP-overview.png)
 
 Follow these steps to create an Azure IoT Hub.
 
@@ -62,6 +62,8 @@ Creating an IoT Hub takes some time. Meanwhile, we will start with the app which
 
 ## creating a new UWP App
 
+![alt tag](img/arch/Picture02-UWP-overview.png)
+
 We will create a UWP app in Visual Studio. These apps are called Universal Windows Apps because they are supported by all sorts of devices running Windows 10. This includes laptops, PC's, Mobile devices like phones and tablets, the Xbox One, The Surface Hub, The Hololens and even the Raspberry Pi.
 
 1. Start Visual Studio
@@ -89,6 +91,8 @@ The app is created. You are now ready to add a connection to the IoT Hub.
 
 
 ## Connect to the IoT Hub and register the app like a device
+
+![alt tag](img/arch/Picture03-UWP-overview.png)
 
 Let's add a connection to IoT hub and register the app like a real device.
 
@@ -130,6 +134,8 @@ Let's add a connection to IoT hub and register the app like a real device.
 The AzureIoTHub can be called by our App. Let's do that.
 
 ## Generate and send dummy telemetry
+
+![alt tag](img/arch/Picture04-UWP-overview.png)
 
 Let's put a button on the main page of the app to send some telemetry. But first let's check out the 'AzureIoTHub.cs' file.
 
@@ -219,7 +225,7 @@ Now we have sent telemetry to the Event Hub. Let's check if it's arrived.
 
 ## Monitoring the arrival of the telemetry in Azure
 
-![alt tag](img/arch/Picture09-monitor-incoming-data.png)
+![alt tag](img/arch/Picture05-UWP-overview.png)
 
 We can check the arrival of messages in the Azure IoT Hub. This can be done using a UI app named Device Explorer or using a Command-Line tool named IoT Hub Explorer. `Choose one` 
 
