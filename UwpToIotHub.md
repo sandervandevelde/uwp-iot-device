@@ -235,8 +235,8 @@ The integration requires an Azure IoT Hub Shared access policy key name with `Re
 
     ![alt tag](img/UwpToIotHub/azure-resource-groups.png)
 
-3. Select the resource group `TechDays42rg`. It will open a new blade with all resources in this group
-4. Select the IoT Hub `TechDays42ih`. It will open a new blade with the IoT Hub
+3. Select the resource group `IoTWorkshoprg`. It will open a new blade with all resources in this group
+4. Select the IoT Hub `IoTWorkshopih`. It will open a new blade with the IoT Hub
 
     ![alt tag](img/UwpToIotHub/azure-iot-hub-initial.png)
 
@@ -244,7 +244,7 @@ The integration requires an Azure IoT Hub Shared access policy key name with `Re
 
     ![alt tag](img/UwpToIotHub/azure-iot-hub-share-access-policy.png)
 
-6. **Write down** the `name` of the IoT Hub eg. `TechDays42ih`
+6. **Write down** the `name` of the IoT Hub eg. `IoTWorkshopih`
 7. Navigate to the 'iothubowner' policy and **write down** this `Connection String-Primary Key`
 
     ![alt tag](img/UwpToIotHub/azure-iothubowner-policy.png)
