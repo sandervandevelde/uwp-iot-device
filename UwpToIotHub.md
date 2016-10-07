@@ -153,7 +153,7 @@ Let's put a button on the main page of the app to send some telemetry. But first
     }
     ```
 
-4. We have defined the Telemetry class whick will hold a water level value. The level will be send to the IoT Hub using the method. The telemetry is converted to Json.
+4. We have defined the Telemetry class which will hold a water level value. The random levels are sent to the IoT Hub using the method. The telemetry is converted to JSON.
 5. `Open` the file named 'MainPage.xaml'. The empty page will be shown both in a visual editor and a textual 'XAML' editor
 6. The page contains one component, a grid. But that is merely a container for other visual components
 7. In the XAML editor, within the grid, `add`
@@ -279,14 +279,14 @@ We can check the arrival of the messages in the Azure IoT Hub using the IoT Hub 
 1. Create a new folder eg. `c:\iothubexplorer`
 2. In a dos-box, navigate to the new folder 
 3. In this folder, run the following command `npm install -g iothub-explorer@latest` in your command-line environment, to install the latest (pre-release) version of the iothub-explorer tool
-4. Login to the IoT Hub Explorer by supplying your IoT Hub *remembered* `Connection String-primary key` using the command `iothub-explorer login "[your connection string]"`
+4. Login to the IoT Hub Explorer by supplying your *remembered* IoT Hub `Connection String-primary key` using the command `iothub-explorer login "[your connection string]"`
 5. A session with the IoT Hub will start and it will last for approx. one hour:
 
     ```
     Session started, expires Tue Sep 27 2016 18:35:37 GMT+0200 (W. Europe Daylight Time)
     ```
 
-6. To monitor the device-to-cloud messages from a device, use the following command `iothub-explorer "[your connection string]" monitor-events [device name]`  and `fill in` your  *remembered* 'Connection String-primary key' and *remember* device name
+6. To monitor the device-to-cloud messages from a device, use the following command `iothub-explorer "[your connection string]" monitor-events [device name]`  and `fill in` your *remembered* IoT Hub 'Connection String-primary key' and *remember* device name
 7. This will result in the following messages
 
     ```
