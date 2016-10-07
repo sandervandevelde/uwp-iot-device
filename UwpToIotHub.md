@@ -205,10 +205,10 @@ Let's put a button on the main page of the app to send some telemetry. But first
 10. The method 'btnSend_Click' now generates some random value and sends it to the Iot Hub using the access token of the device 'DummyDevice'
 11. New libraries references are introduced in this code. `Add` two using's at the top of the editor
 
-    '''csharp
+    ```csharp
     using System.Threading.Tasks;
     using Windows.UI.Core;
-    '''
+    ```
 
 12. The app is now ready. `Run` the app and press the button. It the message 'Telemetry sent' is shown, our telemetry is accepted by the IoT Hub
 
