@@ -20,7 +20,7 @@ This is an example integration between a UWP app and Azure IoT Hub. This integra
 
 ### Objectives
 
-In this work shop you will learn
+In this work shop, you will learn
 
 1. Creating an IoT Hub in the Azure Portal
 2. Creating a new UWP App
@@ -134,7 +134,7 @@ The AzureIoTHub can be called by our App. Let's do that.
 Let's put a button on the main page of the app to send some telemetry. But first let's check out the 'AzureIoTHub.cs' file.
 
 1. `Open` the file named 'AzureIoTHub.cs'
-2. The file contains a class named which has two methods: 'SendDeviceToCloudMessageAsync' and 'ReceiveCloudToDeviceMessageAsync'. *In this work shop we will only send telemetry*
+2. The file contains a class named which has two methods: 'SendDeviceToCloudMessageAsync' and 'ReceiveCloudToDeviceMessageAsync'. *In this work shop, we will only send telemetry*
 3. The method to send data is not that intelligent. It only sends a text message. Add the following code just below it
 
     ```csharp
