@@ -1,8 +1,8 @@
-## Connecting to an IoT Hub using an UWP app
+## Connecting to an IoT Hub using a UWP app
 
 ![alt tag](img/arch/Picture01-overview.png)
 
-This is an example integration between an UWP app and Azure IoT Hub. This integration shows features like creating devices in the Azure IoT Hub device registry as well as sending telemetry to the IoT Hub.
+This is an example integration between a UWP app and Azure IoT Hub. This integration shows features like creating devices in the Azure IoT Hub device registry as well as sending telemetry to the IoT Hub.
 
 *Note: in this workshop, we will create uniquely named Azure resources. The suggested names could be reserved already.*
 
@@ -11,7 +11,7 @@ This is an example integration between an UWP app and Azure IoT Hub. This integr
 ### Prerequisites
 
 1. A Windows 10 computer with internet access
-2. Visual Studio 2015 Community edition of higer [https://www.visualstudio.com/vs/community/](https://www.visualstudio.com/vs/community/)
+2. Visual Studio 2015 Community edition of higher [https://www.visualstudio.com/vs/community/](https://www.visualstudio.com/vs/community/)
 3. Universal Windows App Development Tools (Windows SDK)[https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk)
 4. Node.js [https://nodejs.org/en/](https://nodejs.org/en/). _(We prefer Version 6.6)_
 5. Azure account [create here](https://azure.microsoft.com/en-us/free/) _([Azure passes](https://www.microsoftazurepass.com/howto) will be present for those who have no Azure account)_
@@ -20,7 +20,7 @@ This is an example integration between an UWP app and Azure IoT Hub. This integr
 
 ### Objectives
 
-In this workshop you will learn
+In this work shop you will learn
 
 1. Creating an IoT Hub in the Azure Portal
 2. Creating a new UWP App
@@ -62,7 +62,7 @@ Creating an IoT Hub takes some time. Meanwhile, we will start with the app which
 
 ## creating a new UWP App
 
-We will create a UWP app in Visual Studio. These apps are called Wniversal Windows Apps because they are supported by all sorts of devices running Windows 10. This includes laptops, PC's, Mobile devices like phones and tablets, the Xbox One, The Surface Hub, The Hololens and even the Raspberry Pi.
+We will create a UWP app in Visual Studio. These apps are called Universal Windows Apps because they are supported by all sorts of devices running Windows 10. This includes laptops, PC's, Mobile devices like phones and tablets, the Xbox One, The Surface Hub, The Hololens and even the Raspberry Pi.
 
 1. Start Visual Studio
 2. On the Start Page or using the Menu, select New Project...
@@ -83,7 +83,7 @@ We will create a UWP app in Visual Studio. These apps are called Wniversal Windo
     ![alt tag](img/UwpToIotHub/vs-build-succeeded.png)
 
 7. Start the app by pressing `F5` or use the menu `DEBUG|Start Debugging`
-8. The app starting and an empty form is shown
+8. The app starts and an empty form is shown
 
 The app is created. You are now ready to add a connection to the IoT Hub.
 
@@ -93,7 +93,7 @@ The app is created. You are now ready to add a connection to the IoT Hub.
 Let's add a connection to IoT hub and register the app like a real device.
 
 1. Stop the running app using, if the app is on top, `ALT-F4` or the menu `DEBUG|Stop debugging`
-2. Go to the soltion Explorer to the right. You can see the application has one page called MainPage.xaml
+2. Go to the solution Explorer to the right. You can see the application has one page called MainPage.xaml
 
     ![alt tag](img/UwpToIotHub/vs-solution-explorer-universal-start.png)
 3. Right click `References` and select `Add Connected Service`
