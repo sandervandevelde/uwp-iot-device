@@ -1,4 +1,5 @@
 # uwp-iot-device
-This Workshop shows how to use a UWP app as an IoT device for Microsoft Azure IoT
+This work shop shows how to use a UWP app as an IoT device for Microsoft Azure IoT Hub.
+
 
 
