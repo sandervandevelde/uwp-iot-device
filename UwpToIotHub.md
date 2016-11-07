@@ -4,7 +4,7 @@
 
 This is an example integration between a UWP app and Azure IoT Hub. This integration shows features like creating devices in the Azure IoT Hub device registry as well as sending telemetry to the IoT Hub.
 
-*Note: in this workshop, we will create uniquely named Azure resources. The suggested names could be reserved already.*
+*Note: In this workshop, we will create uniquely named Azure resources. The suggested names could be reserved already.*
 
 *Note: The IoT Hub also offers the ability of sending commands back to devices. This is not part of this workshop.*
 
@@ -12,11 +12,12 @@ This is an example integration between a UWP app and Azure IoT Hub. This integra
 
 1. A Windows 10 computer with internet access
 2. Visual Studio 2015 Community edition of higher [https://www.visualstudio.com/vs/community/](https://www.visualstudio.com/vs/community/)
-3. Universal Windows App Development Tools (Windows SDK)[https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk)
-4. Node.js [https://nodejs.org/en/](https://nodejs.org/en/). _(We prefer Version 6.6)_
-5. Azure account [create here](https://azure.microsoft.com/en-us/free/) _([Azure passes](https://www.microsoftazurepass.com/howto) will be present for those who have no Azure account)_
-6a. [IoT Hub Explorer](https://github.com/Azure/azure-iot-sdks/tree/master/tools/iothub-explorer) _(for Command-Line interface  based usage)_ 
-6b. or [Device Explorer](https://github.com/Azure/azure-iot-sdks/blob/master/tools/DeviceExplorer/) _(for GUI based usage)_  
+3. Universal Windows App Development Tools (Windows SDK) [https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk)
+4. Visual Studio Extension 'Connected Service for Azure IoT Hub' [https://visualstudiogallery.msdn.microsoft.com/e254a3a5-d72e-488e-9bd3-8fee8e0cd1d6](https://visualstudiogallery.msdn.microsoft.com/e254a3a5-d72e-488e-9bd3-8fee8e0cd1d6)
+5. Node.js [https://nodejs.org/en/](https://nodejs.org/en/). _(We prefer Version 6.6)_
+6. Azure account [create here](https://azure.microsoft.com/en-us/free/) _([Azure passes](https://www.microsoftazurepass.com/howto) will be present for those who have no Azure account)_
+7a. [IoT Hub Explorer](https://github.com/Azure/azure-iot-sdks/tree/master/tools/iothub-explorer) _(for Command-Line interface  based usage)_ 
+7b. or [Device Explorer](https://github.com/Azure/azure-iot-sdks/blob/master/tools/DeviceExplorer/) _(for GUI based usage)_  
 
 ### Objectives
 
@@ -79,13 +80,14 @@ We will create a UWP app in Visual Studio. These apps are called Universal Windo
 
     ![alt tag](img/UwpToIotHub/vs-universal-anniversary.png)
 
+*Note: If you do not have the Windows 10 Aniversary edition installed, please select the previous SDK*
  
-6. Recompile the app and check if the build completes without errors. Press `F6` or use the menu `BUILD|Build Solution`
+5. Recompile the app and check if the build completes without errors. Press `F6` or use the menu `BUILD|Build Solution`
 
     ![alt tag](img/UwpToIotHub/vs-build-succeeded.png)
 
-7. Start the app by pressing `F5` or use the menu `DEBUG|Start Debugging`
-8. The app starts and an empty form is shown
+6. Start the app by pressing `F5` or use the menu `DEBUG|Start Debugging`
+7. The app starts and an empty form is shown
 
 The app is created. You are now ready to add a connection to the IoT Hub.
 
