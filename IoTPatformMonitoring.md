@@ -1,4 +1,4 @@
-# Operations monitoring your IoT Platform
+# Operations monitoring for your IoT Platform
 
 ![alt tag](img/arch/Picture00-Monitoring-overview.png)
 
