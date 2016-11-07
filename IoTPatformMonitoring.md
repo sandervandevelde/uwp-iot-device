@@ -1,23 +1,23 @@
-# Operations monitoring your IoT Plaform
+# Operations monitoring your IoT Platform
 
 ![alt tag](img/arch/Picture00-Monitoring-overview.png)
 
-This is an example on how to add operations montioring to your Microsoft Azure IoT Hub. We will check how many connections are made etc.
+This is an example of how to add operations monitioring to your Microsoft Azure IoT Hub. We will check how many connections are made etc.
 
 *Note: In this workshop, we will create uniquely named Azure resources. The suggested names could be reserved already.*
 
 ### Prerequisites
 
 1. A running Azure IoT Hub (see part 1) and Azure StreamAnalytics job (see part 2)
-2. One or more dummy devices running and connecting to the Azure Iot Hub (an UWP application, see part 1)
+2. One or more dummy devices running and connecting to the Azure IoT Hub (a UWP application, see part 1)
 3. Azure account create here (Azure passes will be present for those who have no Azure account)
 
 ### Objectives
 
-In this work shop, you will learn:
+In this workshop, you will learn:
 
 1. Adding operations monitoring to an IoT Hub in the Azure Portal
-2. Creating a Azure Storage resource for the operations monitoring data
+2. Creating an Azure Storage resource for the operations monitoring data
 3. Handing Azure IoT Hub monitor data in StreamAnalytics
 4. Connecting and disconnecting using your device
 5. Check the arrival of the operations monitoring data
@@ -45,13 +45,13 @@ Follow these steps to add monitoring to an Azure IoT Hub.
 
     ![alt tag](img/Monitoring/mon03.png)
 
-Now, everytime a device is connected or disconnected, a message will be send to the 'Event Hub-compatible endpoint'.
+Now, every time a device is connected or disconnected, a message will be sent to the 'Event Hub-compatible endpoint'.
  
-*Note: There are other categories to monitor too. In this wrokshop we only look at Connections*
+*Note: There are other categories to monitor too. In this workshop we only look at Connections*
 
-*Note: The endpoint is not really an Event Hub, therefor it can not be monitored using an Azure Function for now*
+*Note: The endpoint is not really an Event Hub, therefore it can not be monitored using an Azure Function for now*
 
-## Creating a Azure Storage resource for the operations monitoring data
+## Creating an Azure Storage resource for the operations monitoring data
 
 ![alt tag](img/arch/Picture02-Monitoring-overview.png)
 
@@ -71,7 +71,7 @@ Follow these steps to create dedicated Azure Storage for your operations monitor
     ![alt tag](img/Monitoring/mon05.png)
 
 5. An introduction will be shown. Select `Create`
-6. Enter a unique storage account name eg. `iotworkshopmonstorage`. A green sign will be shown if the name is unique *Note: storage acount names are written in lower case*
+6. Enter a unique storage account name eg. `iotworkshopmonstorage`. A green sign will be shown if the name is unique *Note: storage account names are written in lower case*
 
     ![alt tag](img/Monitoring/mon06.png)
 
@@ -114,7 +114,7 @@ Follow these steps to start monitoring operation using an Azure StreamAnalytics 
 13. Enter `hubmonbloboutput` as Output alias
 14. Select `Blob storage` as Sink and the storage account is automatically selected
 15. Enter as container name `hubmon` so the operation monitoring data is stored in a separate container
-16. Enter `{date}/{time}` as path pattern. *Note: this will cummulate all data within the same hour in the same directory and file \yyyy\mm\dd\hh*
+16. Enter `{date}/{time}` as path pattern. *Note: this will accumulate all data within the same hour in the same directory and file \yyyy\mm\dd\hh*
 
     ![alt tag](img/Monitoring/mon08.png)
 
@@ -164,7 +164,7 @@ The streamAnalytics job
 
 Follow these steps to add monitoring to an Azure IoT Hub.
 
-*Note: In this workshop the UWP app is used to show how a connection is made. An actual device will does the same*
+*Note: In this workshop the UWP app is used to show how a connection is made. An actual device will do the same*
 
 1. `Start` your UWP app or device
 2. `Send` telemetry. Repeat this several times
@@ -183,8 +183,8 @@ Follow these steps to check operation monitoring coming from an Azure IoT Hub.
     ![alt tag](img/Monitoring/azure-resource-groups.png)
     
 2. Select the ResourceGroup `IoTWorkshoprg`. It will open a new blade with all resources in this group
-3. Select the Azure Storage Account eg. `iotworkshopmonstorage`. The storage account blad will be shown
-4. A storage account has four services. Open the `Blobs` service bij clicking the icon
+3. Select the Azure Storage Account eg. `iotworkshopmonstorage`. The storage account blade will be shown
+4. A storage account has four services. Open the `Blobs` service by clicking the icon
 
     ![alt tag](img/Monitoring/mon14.png)
 
@@ -196,13 +196,13 @@ Follow these steps to check operation monitoring coming from an Azure IoT Hub.
 
     ![alt tag](img/Monitoring/mon16.png)
 
-7. This path represent the date and time. The file represents all monitoring data from the same hour
+7. This path represents the date and time. The file represents all monitoring data from the same hour
 8. `Select` the file to see more details. You can only look at the data by downloading it. 
 9. `Download` the data
 
     ![alt tag](img/Monitoring/mon17.png)
 
-10. in your browser the file will be downloaded. the name is a guid with .json as extension
+10. in your browser, the file will be downloaded. the name is a guid with .json as the extension
 
     ```json
     {"protocol":"Amqp","authType":"{ \"scope\": \"device\", \"type\": \"sas\", \"issuer\": \"iothub\" }","time":"2016-11-07T22:10:28.5889858Z","operationName":"deviceConnect","category":"Connections","level":"Information","deviceId":"DummyDevice"}
@@ -213,7 +213,7 @@ Follow these steps to check operation monitoring coming from an Azure IoT Hub.
 
 The device connection and disconnection are stored.
 
-*Note: Perhaps you will notice that, although you only started the Device app once, you get multiple connect/disconnect messages. This is a shortcomming of the app, not the Azure IoT Hub. The extension 'connected service for Azure IoT Hub' makes stateless connections to the IoT Hub, thus connecting and disconnecting for every telemetry message sent*
+*Note: Perhaps you will notice that, although you only started the Device app once, you get multiple connect/disconnect messages. This is a shortcoming of the app, not the Azure IoT Hub. The extension 'connected service for Azure IoT Hub' makes stateless connections to the IoT Hub, thus connecting and disconnecting for every telemetry message sent*
 
 The monitoring categories in detail:
 
