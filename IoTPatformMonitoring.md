@@ -2,7 +2,7 @@
 
 ![alt tag](img/arch/Picture00-Monitoring-overview.png)
 
-This is an example of how to add operations monitioring to your Microsoft Azure IoT Hub. We will check how many connections are made etc.
+This is an example of how to add operations monitoring to your Microsoft Azure IoT Hub. We will check how many connections are made etc.
 
 *Note: In this workshop, we will create uniquely named Azure resources. The suggested names could be reserved already.*
 
@@ -47,7 +47,7 @@ Follow these steps to add monitoring to an Azure IoT Hub.
 
 Now, every time a device is connected or disconnected, a message will be sent to the 'Event Hub-compatible endpoint'.
  
-*Note: There are other categories to monitor too. In this workshop we only look at Connections*
+*Note: There are other categories to monitor too. In this workshop, we only look at Connections*
 
 *Note: The endpoint is not really an Event Hub, therefore it can not be monitored using an Azure Function for now*
 
@@ -164,7 +164,7 @@ The streamAnalytics job
 
 Follow these steps to add monitoring to an Azure IoT Hub.
 
-*Note: In this workshop the UWP app is used to show how a connection is made. An actual device will do the same*
+*Note: In this workshop, the UWP app is used to show how a connection is made. An actual device will do the same*
 
 1. `Start` your UWP app or device
 2. `Send` telemetry. Repeat this several times
@@ -202,7 +202,7 @@ Follow these steps to check operation monitoring coming from an Azure IoT Hub.
 
     ![alt tag](img/Monitoring/mon17.png)
 
-10. in your browser, the file will be downloaded. the name is a guid with .json as the extension
+10. in your browser, the file will be downloaded. the name is a GUID with .json as the extension
 
     ```json
     {"protocol":"Amqp","authType":"{ \"scope\": \"device\", \"type\": \"sas\", \"issuer\": \"iothub\" }","time":"2016-11-07T22:10:28.5889858Z","operationName":"deviceConnect","category":"Connections","level":"Information","deviceId":"DummyDevice"}
