@@ -21,6 +21,7 @@ In this workshop, you will learn:
 3. Handing Azure IoT Hub monitor data in StreamAnalytics
 4. Connecting and disconnecting using your device
 5. Check the arrival of the operations monitoring data
+6. Bonus: StreamAnalytics metrics monitoring
 
 ## Adding operations monitoring to an IoT Hub in the Azure Portal
 
@@ -222,5 +223,33 @@ The monitoring categories in detail:
 3. Cloud-to-device communications ()
 4. Connections (Log events when a device connects or disconnects from the IoT hub)
 5. File uploads (Log errors related to file upload functionality at the IoT Hub level. Please note that this category cannot catch errors which directly occur while the device is uploading a file to storage)
+
+# Bonus: StreamAnalytics metrics monitoring
+
+Follow these steps to add metrics monitoring to your StreamAnalytics job.
+
+1. On the left, select `Resource groups`. A list of resource groups is shown
+
+    ![alt tag](img/Monitoring/azure-resource-groups.png)
+    
+2. Select the ResourceGroup `IoTWorkshoprg`. It will open a new blade with all resources in this group
+3. Select the Azure Stream Analytics job eg. `IoTWorkshopsa`
+4. Just below the inputs/query/outputs panel, look at the monitoring panel. No data is available
+
+    ![alt tag](img/Monitoring/mon18.png)
+
+5. This is because the monitoring settings are not set yet
+6. `Click` on the panel, a separate Metrics panel is opened
+
+    ![alt tag](img/Monitoring/mon19.png)
+
+7. `Select` diagnostics settings
+
+    ![alt tag](img/Monitoring/mon20.png)
+
+8. The storage account selected, has to be updated. `Select` the account you just created eg. 'iotworkshopmonstorage'
+9. `Save` this settings change and return back to the StreamAnalytics page. Pass some telemetry and wait. This could take several minutes. The events will become visible 
+
+    ![alt tag](img/Monitoring/mon21.png)
 
 This concludes this part of the workshop. Thank you for checking out IoT Hub operations monitoring.
